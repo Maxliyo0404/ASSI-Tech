@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "./Components/Header/Header";
+import Header from "@/components/Header/Header";
 export const metadata = {
   title: "Mening Loyiham",
   description: "Bu mening loyiham tavsifi",
