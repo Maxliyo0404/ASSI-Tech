@@ -1,8 +1,14 @@
+import Link from 'next/link'
 import React from 'react'
-
 function Header() {
   return (
-    <div>Header</div>
+<nav>
+    <ul className='header-list'>
+        <li className='header-item'><Link href="/">About Us</Link></li>
+        <li className='header-item'><Link href="/">About Us</Link></li>
+        <li className='header-item'><Link href="/">About Us</Link></li>
+    </ul>
+</nav>
   )
 }
 
