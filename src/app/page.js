@@ -1,13 +1,15 @@
-import React from 'react'
+import Hero from '@/components/Hero/Hero'
+import Product from '@/components/Product/Product'
+import About from '@/components/About/About'
+import Footer from '@/components/Footer/Footer'
 
-function Home() {
+export default function Home() {
   return (
     <>
-    <main>
-      
-    </main>
+      <Hero />
+      <Product />
+      <About />
+      <Footer />
     </>
   )
 }
-
-export default Home
