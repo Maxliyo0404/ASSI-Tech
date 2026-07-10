@@ -1,14 +1,18 @@
+import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
-import Product from '@/components/Product/Product'
-import About from '@/components/About/About'
+import Products from '@/components/Products/Products'
+import Services from '@/components/Services/Services'
+import Contact from '@/components/Contact/Contact'
 import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (
     <>
+      <Header />
       <Hero />
-      <Product />
-      <About />
+      <Products />
+      <Services />
+      <Contact />
       <Footer />
     </>
   )

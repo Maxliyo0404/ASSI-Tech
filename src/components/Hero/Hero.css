@@ -1,115 +1,90 @@
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 6rem 2rem;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300" stroke="rgba(211,47,47,0.1)" stroke-width="2" fill="none"/></svg>');
+  background-size: cover;
+  padding: 4rem 2rem;
   min-height: 600px;
   display: flex;
   align-items: center;
 }
 
-.hero-container {
+.hero-content {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+  width: 100%;
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.2;
+.hero-left h1 {
+  font-size: 2.8rem;
+  color: white;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
+.hero-left p {
+  font-size: 1.1rem;
+  color: #ddd;
   margin: 0 0 2rem 0;
-  opacity: 0.95;
   line-height: 1.6;
 }
 
-.hero-buttons {
+.contact-form {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.btn {
-  padding: 1rem 2rem;
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d32f2f;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
+
+.btn-submit {
+  background: #d32f2f;
+  color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
-.btn-primary {
-  background: #ffd700;
-  color: #333;
+.btn-submit:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
 }
 
-.btn-primary:hover {
-  background: #ffed4e;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.btn-secondary:hover {
-  background: white;
-  color: #667eea;
-  transform: translateY(-3px);
-}
-
-.hero-image {
+.hero-right {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-visual {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.circle {
-  position: absolute;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
-}
-
-.circle-1 {
-  width: 250px;
-  height: 250px;
-  top: 25px;
-  left: 25px;
-  animation-delay: 0s;
-}
-
-.circle-2 {
-  width: 180px;
-  height: 180px;
-  top: 60px;
-  left: 60px;
-  animation-delay: 0.5s;
-}
-
-.circle-3 {
-  width: 110px;
-  height: 110px;
-  top: 95px;
-  left: 95px;
-  animation-delay: 1s;
-  background: rgba(255, 255, 255, 0.1);
+.medical-image {
+  font-size: 15rem;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -122,29 +97,20 @@
 }
 
 @media (max-width: 768px) {
-  .hero-container {
+  .hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
-  .hero-content h1 {
-    font-size: 2rem;
+  .hero-left h1 {
+    font-size: 1.8rem;
   }
 
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
+  .medical-image {
+    font-size: 8rem;
   }
 
   .hero {
-    padding: 4rem 1rem;
-    min-height: 500px;
-  }
-
-  .hero-visual {
-    display: none;
+    min-height: auto;
+    padding: 2rem 1rem;
   }
 }
